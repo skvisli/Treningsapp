@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 public class Settings extends AppCompatActivity {
 
@@ -33,5 +35,13 @@ public class Settings extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void clickVarOn(){
+        ImageView imageOn = (ImageView) findViewById(R.id.varOn);
+        ImageView imageOff = (ImageView) findViewById(R.id.varOff);
+
+        imageOn.setVisibility(View.INVISIBLE);
+        imageOff.setVisibility(View.VISIBLE);
     }
 }

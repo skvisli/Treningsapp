@@ -16,4 +16,61 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Innstillinger"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/button5"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Varslinger"
+        android:id="@+id/textView7"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/textView6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Trofeer"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/textView7"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginTop="40dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/varOn"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/textView6"
+        android:onClick="clickVarOn" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/varOff"
+        android:layout_alignTop="@+id/varOn"
+        android:layout_toEndOf="@+id/varOn" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/troOn"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/troOff"
+        android:layout_alignTop="@+id/troOn"
+        android:layout_toStartOf="@+id/troOn" />
 </RelativeLayout>
