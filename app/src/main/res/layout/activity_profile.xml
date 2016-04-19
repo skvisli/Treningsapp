@@ -16,4 +16,21 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_below="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:text="Sondre Kvisli" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/editText"
+        android:layout_toStartOf="@+id/editText"
+        android:layout_marginTop="34dp"
+        android:text="10 000 steps" />
 </RelativeLayout>
