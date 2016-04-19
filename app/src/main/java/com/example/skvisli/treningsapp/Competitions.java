@@ -2,6 +2,7 @@ package com.example.skvisli.treningsapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -22,6 +24,8 @@ public class Competitions extends AppCompatActivity {
     ImageView bypameldt;
     ImageView pokal1;
     ImageView pokal2;
+    LinearLayout linyes;
+    LinearLayout linnot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +40,10 @@ public class Competitions extends AppCompatActivity {
         byOpen = (ImageView) findViewById(R.id.byasenOpen);
         byClosed = (ImageView) findViewById(R.id.byasenClosed);
         bypameldt= (ImageView) findViewById(R.id.byasenrundtpameldt);
-        pokal1= (ImageView) findViewById(R.id.pokal1);
-        pokal2= (ImageView) findViewById(R.id.pokal2);
+        pokal1 = (ImageView) findViewById(R.id.pokal1);
+        pokal2 = (ImageView) findViewById(R.id.pokal2);
+        linyes = (LinearLayout) findViewById(R.id.layoutYes);
+        linnot = (LinearLayout) findViewById(R.id.layoutNot);
     }
 
     @Override
@@ -67,21 +73,15 @@ public class Competitions extends AppCompatActivity {
     }
 
     public void accept(View view){
-        downArrow();
-        byClosed.setVisibility(View.INVISIBLE);
-        bypameldt.setVisibility(View.VISIBLE);
-        accept.setVisibility(View.INVISIBLE);
-        x.setVisibility(View.VISIBLE);
-        accept.setVisibility(View.INVISIBLE);
-
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-        params.addRule(RelativeLayout.ALIGN_BOTTOM, RelativeLayout.TRUE);
-        head.setLayoutParams(params);
+        linyes.setVisibility(View.VISIBLE);
+        linnot.setVisibility(View.INVISIBLE);
 
     }
 
-    public void meldAV(View view){
-        bypameldt.setVisibility(View.INVISIBLE);
+    public void meldAv(View view){
+        linyes.setVisibility(View.INVISIBLE);
+        linnot.setVisibility(View.VISIBLE);
+        downArrow();
     }
 
     public void downArrow(){
