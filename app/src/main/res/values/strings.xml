@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Treningsapp</string>
+    <string name="title_activity_main">Main</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_competitions">Competitions</string>
+    <string name="title_activity_results">Results</string>
+    <string name="title_activity_steps">Steps</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_settings">Settings</string>
 </resources>
