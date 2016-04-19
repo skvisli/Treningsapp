@@ -16,4 +16,103 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Competitions"
+        android:id="@+id/headline"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pokal1"
+        android:layout_below="@+id/button2"
+        android:src="@drawable/trofe"
+        android:layout_alignBottom="@+id/headline"
+        android:layout_toStartOf="@+id/headline" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pokal2"
+        android:src="@drawable/trofe"
+        android:layout_alignTop="@+id/headline"
+        android:layout_alignBottom="@+id/headline"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/headline" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noergePaTvers"
+        android:layout_below="@+id/headline"
+        android:layout_marginTop="102dp"
+        android:src="@drawable/norgepatvers"
+        android:layout_alignEnd="@+id/pokal2"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/byasenClosed"
+        android:layout_below="@+id/noergePaTvers"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/byasenrundt"
+        android:layout_alignEnd="@+id/noergePaTvers" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/byasenOpen"
+        android:layout_below="@+id/noergePaTvers"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/byasenrundtopen"
+        android:layout_alignEnd="@+id/noergePaTvers"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/downArrow"
+        android:layout_alignBottom="@+id/byasenClosed"
+        android:src="@drawable/downarrow"
+        android:layout_below="@+id/noergePaTvers"
+        android:layout_toEndOf="@+id/headline"
+        android:onClick="clickDownArrow" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/acceptButton"
+        android:layout_toEndOf="@+id/headline"
+        android:src="@drawable/accept"
+        android:layout_alignBottom="@+id/byasenOpen"
+        android:visibility="invisible"
+        android:onClick="accept" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/byasenrundtpameldt"
+        android:layout_alignTop="@+id/pokal1"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/byasenrundtpameldt"
+        android:layout_alignEnd="@+id/pokal2"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/avmeld"
+        android:src="@drawable/x"
+        android:layout_below="@+id/button2"
+        android:layout_alignStart="@+id/pokal2"
+        android:layout_alignEnd="@+id/acceptButton"
+        android:onClick="meldAv"
+        android:visibility="invisible" />
+
 </RelativeLayout>
