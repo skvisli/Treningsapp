@@ -10,28 +10,27 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".Main"
-            android:label="@string/title_activity_main" >
+            android:label="@string/title_activity_main">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Competitions"
-            android:label="@string/title_activity_competitions" >
-        </activity>
+            android:label="@string/title_activity_competitions"/>
         <activity
             android:name=".Results"
-            android:label="@string/title_activity_results" >
-        </activity>
+            android:label="@string/title_activity_results"/>
         <activity
             android:name=".Steps"
-            android:label="@string/title_activity_steps" >
-        </activity>
+            android:label="@string/title_activity_steps"/>
         <activity
             android:name=".Profile"
-            android:label="@string/title_activity_profile" >
-        </activity>
+            android:label="@string/title_activity_profile"/>
         <activity
             android:name=".Settings"
-            android:label="@string/title_activity_settings" >
-        </activity>
+            android:label="@string/title_activity_settings"/>
     </application>
 
 </manifest>
