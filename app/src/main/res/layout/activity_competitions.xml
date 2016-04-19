@@ -16,4 +16,205 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentStart="true"
+        android:id="@+id/layoutYes">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/byasenrundtpameldt"
+                android:src="@drawable/byasenrundtpameldt"
+                android:visibility="visible"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/avmeld"
+                android:src="@drawable/x"
+                android:onClick="meldAv"
+                android:visibility="visible"
+                android:layout_marginEnd="13dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignEnd="@+id/byasenrundtpameldt" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:weightSum="1"
+            android:textAlignment="center"
+            android:layout_marginLeft="75dp" >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView6"
+                android:src="@drawable/trofe"
+                android:layout_alignTop="@+id/textView19"
+                android:layout_alignBottom="@+id/textView19"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/textView19" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Competitions"
+                android:id="@+id/textView19"
+                android:layout_below="@+id/button2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView7"
+                android:layout_below="@+id/button2"
+                android:src="@drawable/trofe"
+                android:layout_alignBottom="@+id/textView19"
+                android:layout_toStartOf="@+id/textView19" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView8"
+                android:layout_below="@+id/textView19"
+                android:src="@drawable/norgepatvers"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/layoutNot"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:weightSum="1"
+            android:textAlignment="center"
+            android:layout_marginLeft="75dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:id="@+id/pokal2"
+                android:src="@drawable/trofe"
+                android:layout_alignTop="@+id/headline"
+                android:layout_alignBottom="@+id/headline"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/headline" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Competitions"
+                android:id="@+id/headline"
+                android:layout_below="@+id/button2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/pokal1"
+                android:layout_below="@+id/button2"
+                android:src="@drawable/trofe"
+                android:layout_alignBottom="@+id/headline"
+                android:layout_toStartOf="@+id/headline" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/noergePaTvers"
+                android:layout_below="@+id/headline"
+                android:src="@drawable/norgepatvers"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:id="@+id/byasenClosed"
+                android:layout_below="@+id/noergePaTvers"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/byasenrundt"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/byasenOpen"
+                android:layout_below="@+id/noergePaTvers"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/byasenrundtopen"
+                android:visibility="invisible"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:id="@+id/downArrow"
+                android:src="@drawable/downarrow"
+                android:onClick="clickDownArrow"
+                android:layout_marginEnd="39dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/acceptButton"
+                android:src="@drawable/accept"
+                android:visibility="invisible"
+                android:onClick="accept"
+                android:layout_alignStart="@+id/downArrow"
+                android:layout_below="@+id/byasenClosed" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>
