@@ -51,26 +51,35 @@
         android:id="@+id/varOn"
         android:layout_centerVertical="true"
         android:layout_toEndOf="@+id/textView6"
-        android:onClick="clickVarOn" />
+        android:onClick="clickVarOn"
+        android:src="@drawable/newonbutt" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/varOff"
-        android:layout_alignTop="@+id/varOn"
-        android:layout_toEndOf="@+id/varOn" />
+        android:src="@drawable/newofbutt"
+        android:visibility="invisible"
+        android:onClick="clickVarOff"
+        android:layout_alignBottom="@+id/varOn"
+        android:layout_alignEnd="@+id/varOn" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/troOn"
+        android:src="@drawable/newonbutt"
+        android:onClick="clickTroOn"
         android:layout_alignTop="@+id/textView8"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignEnd="@+id/varOff" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/troOff"
-        android:layout_alignTop="@+id/troOn"
-        android:layout_toStartOf="@+id/troOn" />
+        android:src="@drawable/newofbutt"
+        android:visibility="invisible"
+        android:onClick="clickTroOff"
+        android:layout_alignBottom="@+id/troOn"
+        android:layout_alignEnd="@+id/troOn" />
 </RelativeLayout>

@@ -37,11 +37,35 @@ public class Settings extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void clickVarOn(){
+    public void clickVarOn(View view){
         ImageView imageOn = (ImageView) findViewById(R.id.varOn);
         ImageView imageOff = (ImageView) findViewById(R.id.varOff);
 
         imageOn.setVisibility(View.INVISIBLE);
         imageOff.setVisibility(View.VISIBLE);
+    }
+
+    public void clickVarOff(View view){
+        ImageView imageOn = (ImageView) findViewById(R.id.varOn);
+        ImageView imageOff = (ImageView) findViewById(R.id.varOff);
+
+        imageOn.setVisibility(View.VISIBLE);
+        imageOff.setVisibility(View.INVISIBLE);
+    }
+
+    public void clickTroOn(View view){
+        ImageView troOn = (ImageView) findViewById(R.id.troOn);
+        ImageView troOff = (ImageView) findViewById(R.id.troOff);
+
+        troOn.setVisibility(View.INVISIBLE);
+        troOff.setVisibility(View.VISIBLE);
+    }
+
+    public void clickTroOff(View view){
+        ImageView troOn = (ImageView) findViewById(R.id.troOn);
+        ImageView troOff = (ImageView) findViewById(R.id.troOff);
+
+        troOn.setVisibility(View.VISIBLE);
+        troOff.setVisibility(View.INVISIBLE);
     }
 }
