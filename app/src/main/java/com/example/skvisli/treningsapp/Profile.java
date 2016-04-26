@@ -1,16 +1,30 @@
 package com.example.skvisli.treningsapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 public class Profile extends AppCompatActivity {
+
+    private ImageButton hjem;
+    private ImageButton konkurranse;
+    private ImageButton skritt;
+    private ImageButton resultat;
+    private ImageButton instilling;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        hjem = (ImageButton) findViewById(R.id.hjem);
+        konkurranse = (ImageButton) findViewById(R.id.konkurranse);
+        skritt = (ImageButton) findViewById(R.id.skritt);
+        resultat = (ImageButton) findViewById(R.id.resultat);
+        instilling = (ImageButton) findViewById(R.id.instilling);
     }
 
     @Override
@@ -18,6 +32,24 @@ public class Profile extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_profile, menu);
         return true;
+    }
+
+    public void goTo(View view){
+        if(hjem.isPressed()){
+            startActivity(new Intent(this, Main.class));
+        }
+        if(konkurranse.isPressed()){
+            startActivity(new Intent(this, Competitions.class));
+        }
+        if(skritt.isPressed()){
+            startActivity(new Intent(this, Steps.class));
+        }
+        if(resultat.isPressed()){
+            startActivity(new Intent(this, Results.class));
+        }
+        if(instilling.isPressed()){
+            startActivity(new Intent(this, Settings.class));
+        }
     }
 
     @Override
