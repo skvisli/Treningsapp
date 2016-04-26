@@ -102,4 +102,20 @@ public class Settings extends AppCompatActivity {
         troOn.setVisibility(View.VISIBLE);
         troOff.setVisibility(View.INVISIBLE);
     }
+
+    public void clickAnoOn(View view){
+        ImageView anoOn = (ImageView) findViewById(R.id.anoOn);
+        ImageView anoOff = (ImageView) findViewById(R.id.anoOff);
+
+        anoOn.setVisibility(View.INVISIBLE);
+        anoOff.setVisibility(View.VISIBLE);
+    }
+
+    public void clickAnoOff(View view){
+        ImageView anoOn = (ImageView) findViewById(R.id.anoOn);
+        ImageView anoOff = (ImageView) findViewById(R.id.anoOff);
+
+        anoOn.setVisibility(View.VISIBLE);
+        anoOff.setVisibility(View.INVISIBLE);
+    }
 }
