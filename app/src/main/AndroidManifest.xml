@@ -11,26 +11,31 @@
         <activity
             android:name=".Main"
             android:label="@string/title_activity_main">
-            <intent-filter >
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Competitions"
-            android:label="@string/title_activity_competitions"/>
+            android:label="@string/title_activity_competitions">
+        <intent-filter >
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".Results"
-            android:label="@string/title_activity_results"/>
+            android:label="@string/title_activity_results">
+        </activity>
         <activity
             android:name=".Steps"
-            android:label="@string/title_activity_steps"/>
+            android:label="@string/title_activity_steps">
+        </activity>
         <activity
             android:name=".Profile"
-            android:label="@string/title_activity_profile"/>
+            android:label="@string/title_activity_profile">
+        </activity>
         <activity
             android:name=".Settings"
-            android:label="@string/title_activity_settings"/>
+            android:label="@string/title_activity_settings">
+        </activity>
     </application>
 
 </manifest>

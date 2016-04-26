@@ -1,19 +1,176 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
+    android:paddingRight="3dp"
+    android:paddingLeft="3dp"
+    android:paddingTop="5dp"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.skvisli.treningsapp.Settings"
     android:background="#ffffff">
 
-    <Button
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button5"
-        android:minHeight="90dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Innstillinger"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/imageView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Varslinger"
+        android:id="@+id/textView7"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/textView6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Trofeer"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/textView7"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginTop="40dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/varOn"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/textView6"
+        android:onClick="clickVarOn"
+        android:src="@drawable/newonbutt" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/varOff"
+        android:src="@drawable/newofbutt"
+        android:visibility="invisible"
+        android:onClick="clickVarOff"
+        android:layout_alignBottom="@+id/varOn"
+        android:layout_alignEnd="@+id/varOn" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/troOn"
+        android:src="@drawable/newonbutt"
+        android:onClick="clickTroOn"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_alignEnd="@+id/varOff" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/troOff"
+        android:src="@drawable/newofbutt"
+        android:visibility="invisible"
+        android:onClick="clickTroOff"
+        android:layout_alignBottom="@+id/troOn"
+        android:layout_alignEnd="@+id/troOn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Anonym"
+        android:id="@+id/textView19"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/troOn"
+        android:layout_alignStart="@+id/textView8" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/anoOff"
+        android:src="@drawable/newofbutt"
+        android:visibility="invisible"
+        android:onClick="clickAnoOff"
+        android:layout_alignBottom="@+id/textView19"
+        android:layout_alignStart="@+id/troOn" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/anoOn"
+        android:src="@drawable/newonbutt"
+        android:onClick="clickAnoOn"
+        android:layout_alignBottom="@+id/anoOff"
+        android:layout_alignStart="@+id/anoOff" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/linearLayout6" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hjem"
+            android:src="@drawable/hjemikon"
+            android:background="#ffffff"
+            android:padding="1dp"
+            android:onClick="goTo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/konkurranse"
+            android:src="@drawable/konkurranseikon"
+            android:background="#ffffff"
+            android:onClick="goTo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skritt"
+            android:src="@drawable/skrittikon"
+            android:background="#ffffff"
+            android:onClick="goTo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultat"
+            android:src="@drawable/pallikon"
+            android:background="#ffffff"
+            android:onClick="goTo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profil"
+            android:src="@drawable/profilikon"
+            android:background="#ffffff"
+            android:onClick="goTo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/instilling"
+            android:src="@drawable/instillingikon"
+            android:background="#ffffff" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="293dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView7"
+        android:src="@drawable/strek"
+        android:background="#000000"
+        android:layout_below="@+id/linearLayout6"
+        android:layout_alignParentStart="true" /><![CDATA[
+
+    >>>>>>> master
+]]>
 </RelativeLayout>

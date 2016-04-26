@@ -1,19 +1,299 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:paddingTop="5dp"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.skvisli.treningsapp.Competitions"
     android:background="#ffffff">
 
-    <Button
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button2"
-        android:minHeight="90dp"
+        android:layout_height="55dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/linearLayout">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hjem"
+            android:src="@drawable/hjemikon"
+            android:background="#ffffff"
+            android:padding="1dp"
+            android:onClick="goTo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/konkurranse"
+            android:src="@drawable/konkurranseikon"
+            android:background="#ffffff" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skritt"
+            android:src="@drawable/skrittikon"
+            android:background="#ffffff"
+            android:onClick="goTo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultat"
+            android:src="@drawable/pallikon"
+            android:background="#ffffff"
+            android:onClick="goTo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profil"
+            android:src="@drawable/profilikon"
+            android:background="#ffffff"
+            android:onClick="goTo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/instilling"
+            android:src="@drawable/instillingikon"
+            android:background="#ffffff"
+            android:onClick="goTo" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/strek"
+        android:background="#000000"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignEnd="@+id/linearLayout" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@drawable/strek"
+        android:background="#000000"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_alignParentStart="true"
+            android:id="@+id/layoutYes">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/byasenrundtpameldt"
+                    android:src="@drawable/byasenrundtpameldt"
+                    android:visibility="visible"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/avmeld"
+                    android:src="@drawable/x"
+                    android:onClick="meldAv"
+                    android:visibility="visible"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignEnd="@+id/byasenrundtpameldt"
+                    android:background="#c4c4c4"
+                    android:layout_marginEnd="25dp"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:weightSum="1"
+                android:textAlignment="center"
+                android:layout_marginLeft="75dp" >
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView6"
+                    android:src="@drawable/trofe"
+                    android:layout_alignTop="@+id/textView19"
+                    android:layout_alignBottom="@+id/textView19"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/textView19" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Competitions"
+                    android:id="@+id/textView19"
+                    android:layout_below="@+id/button2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView7"
+                    android:layout_below="@+id/button2"
+                    android:src="@drawable/trofe"
+                    android:layout_alignBottom="@+id/textView19"
+                    android:layout_toStartOf="@+id/textView19" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/anoOff"
+                    android:layout_below="@+id/textView19"
+                    android:src="@drawable/norgepatvers"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/layoutNot"
+            android:layout_alignParentEnd="true">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:weightSum="1"
+                android:textAlignment="center"
+                android:layout_marginLeft="75dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/pokal2"
+                    android:src="@drawable/trofe"
+                    android:layout_alignTop="@+id/headline"
+                    android:layout_alignBottom="@+id/headline"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/headline" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Competitions"
+                    android:id="@+id/headline"
+                    android:layout_below="@+id/button2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pokal1"
+                    android:layout_below="@+id/button2"
+                    android:src="@drawable/trofe"
+                    android:layout_alignBottom="@+id/headline"
+                    android:layout_toStartOf="@+id/headline" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp" >
+
+                <ImageView
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/noergePaTvers"
+                    android:src="@drawable/norgepatvers"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#f0f0f0" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="88dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:id="@+id/byasenClosed"
+                    android:layout_below="@+id/noergePaTvers"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/byasenrundt"
+                    android:layout_alignParentEnd="true" />
+
+                <ImageView
+                    android:layout_width="290dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/byasenOpen"
+                    android:src="@drawable/byasenrundtopen"
+                    android:visibility="invisible"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#e2e2e2" />
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/downArrow"
+                    android:src="@drawable/downarrow"
+                    android:onClick="clickDownArrow"
+                    android:layout_marginEnd="46dp"
+                    android:background="#e2e2e2"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="7dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/acceptButton"
+                    android:src="@drawable/accept"
+                    android:visibility="invisible"
+                    android:onClick="accept"
+                    android:layout_marginRight="11dp"
+                    android:background="#e2e2e2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignEnd="@+id/downArrow"
+                    android:layout_marginBottom="3dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>
