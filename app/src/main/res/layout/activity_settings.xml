@@ -8,6 +8,74 @@
     tools:context="com.example.skvisli.treningsapp.Settings"
     android:background="#ffffff">
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Innstillinger"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/imageView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Varslinger"
+        android:id="@+id/textView7"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/textView6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Trofeer"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/textView7"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginTop="40dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/varOn"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/textView6"
+        android:onClick="clickVarOn"
+        android:src="@drawable/newonbutt" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/varOff"
+        android:src="@drawable/newofbutt"
+        android:visibility="invisible"
+        android:onClick="clickVarOff"
+        android:layout_alignBottom="@+id/varOn"
+        android:layout_alignEnd="@+id/varOn" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/troOn"
+        android:src="@drawable/newonbutt"
+        android:onClick="clickTroOn"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_alignEnd="@+id/varOff" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/troOff"
+        android:src="@drawable/newofbutt"
+        android:visibility="invisible"
+        android:onClick="clickTroOff"
+        android:layout_alignBottom="@+id/troOn"
+        android:layout_alignEnd="@+id/troOn" />
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
@@ -74,4 +142,5 @@
         android:layout_below="@+id/linearLayout6"
         android:layout_alignParentStart="true" />
 
+>>>>>>> master
 </RelativeLayout>
